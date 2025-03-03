@@ -1,0 +1,59 @@
+        /* elemen selector */
+        body {
+            background-color: #FFDFEF;
+            font-family: arial;
+        }
+        p {
+            color: blueviolet;
+        }
+
+        h1, h2, h3 {
+            color: green;
+        }
+        /* class selector */
+        .bg-warning {
+            background-color: yellow;
+        }
+        .text-succes {
+            color: palevioletred;
+        }
+        /* id selector */
+        #h5 {
+            color: blue;
+        }
+
+        /* untuk menghilangkan garis bawah pada link */
+        a {
+            text-decoration: none;
+            color: palevioletred;
+        }
+
+        /* untuk pas arahin kursor pas teks link berwarna hitam */
+        a:hover {
+            color: purple;
+            text-decoration: underline;
+        }
+
+        /* untuk membuat gambar menjadi lengkungan di tepi */
+        .rounded{
+            border-radius: 20px;
+        }
+
+        /* form */
+        input[type="text"], input[type="date"], textarea, select{
+            width: 100%;
+            border-radius: 10px;  /* sudut border */
+            padding: 5px;  /* sisi dalam border */
+            border: 5px solid palevioletred;  /* solid, dashed, dotted */
+            /* margin: 20px; sisi luar border */
+        }
+
+        button{
+            border-radius: 10px;
+            border: 1px solid white;
+            background-color: palevioletred;
+            color: white;
+            padding: 5px;
+            width: 100%;
+        }
+        
