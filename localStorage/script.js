@@ -19,6 +19,11 @@ function simpan(){
 
     localStorage.setItem ('ls_bukutamu', JSON.stringify(data)); // simpan ke loval storage
 
+    //kosongkan isi elemen daftar_tamu
+    daftar_tamu.innerHTML = ` `;
+    // panggil fungsi tampil
+    tampil();
+
 }
 
 function tampil(){
