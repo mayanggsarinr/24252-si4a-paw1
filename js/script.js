@@ -27,9 +27,23 @@ nilai.forEach( (data) => {
     </tr>`;
 } );
 
-fetch('https://dummyjson.com/quotes') // akses API quotes
-.then(res => res.json()) // ubah data ke json
-.then(data => { // tampilkan data
-    console.log(data.quotes)
-    data.quotes.forEach( (q) => { document.getElementById('quotes').innerHTML += `<li>${q.quote} - ${q.author}</li>` } )
- });
+fetch("https://dummyjson.com/quotes")
+.then(res => res.json())
+.then(data => {
+    console.log(data.quotes);
+    let quotesContainer = document.getElementById('quotes');
+    quotesContainer.innerHTML = "";
+
+    data.quotes.forEach( (q) => { 
+    document.getElementById('quotes').innerHTML += `
+    <div class = "col-lg-4 col-md-6 col-sm-12 mt-4">
+        <div class = "card h-100 shadow-sm">
+            <div class = "card-body">
+                <p class = "card-text"> "${q.quote}" </p>
+                <h6 class = "card-subtitle textmuted text-end"> -${q.author} </h6>
+            </div>
+        </div>
+    </div>`;
+    });
+});
+ 
